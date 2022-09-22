@@ -65,13 +65,13 @@ interface AppProps {
 }
 
 export function App({
-  configuration,
-  page,
-  commerceConfig,
-  commerceClientFactory,
-  apolloState,
-  cookies,
-}: AppProps): JSX.Element {
+                      configuration,
+                      page,
+                      commerceConfig,
+                      commerceClientFactory,
+                      apolloState,
+                      cookies,
+                    }: AppProps): JSX.Element {
   const [, setCookieConsentVal] = useState<boolean>();
   const mapping = {
     BannerCollection,
@@ -139,78 +139,60 @@ export function App({
             <div className="home-pacific-beauty-landingpage-personalized">
               <BrPage configuration={{ ...configuration, httpClient: axios as any }} mapping={mapping} page={page}>
                 <BrPageContext.Consumer>
-                  {(contextPage) => (<>
-                    <Meta page={contextPage!}/>
-                    <div className="home-pacific-beauty-global-nav">
-                      <div className="home-frame155">
-                        <div className="home-frame160">
-                          <div className="home-frame156">
-                            <img
-                              src="public/playground_assets/unioni152-j6vqi.svg"
-                              alt="UnionI152"
-                              className="home-union"
-                            />
+                  {(contextPage) => (
+                    <>
+                      <Meta page={contextPage!}/>
+                      <div className="home-pacific-beauty-global-nav">
+                        <div className="home-frame155">
+                          <div className="home-frame160">
+                            <div className="home-frame156">
+                              <img
+                                src="/playground_assets/unioni152-j6vqi.svg"
+                                alt="UnionI152"
+                                className="home-union"
+                              />
+                            </div>
                           </div>
-                        </div>
-                        <span className="home-text">
-                <span className="home-text001">PACIFIC</span>
-                <span>BEAUTY</span>
-              </span>
-                        <div className="home-frame159">
-                          <div className="home-frame1561">
-                            <img
-                              src="public/playground_assets/unioni152-hp0h.svg"
-                              alt="UnionI152"
-                              className="home-union1"
-                            />
-                            <div className="home-shopping-basket-icon">
+                          <span className="home-text">
+                          <span className="home-text001">PACIFIC</span>
+                          <span>BEAUTY</span>
+                        </span>
+                          <div className="home-frame159">
+                            <div className="home-frame1561">
                               <img
-                                src="public/playground_assets/vectori152-2hh.svg"
-                                alt="VectorI152"
-                                className="home-vector"
+                                src="/playground_assets/unioni152-hp0h.svg"
+                                alt="UnionI152"
+                                className="home-union1"
                               />
-                              <img
-                                src="public/playground_assets/vectori152-i0qk.svg"
-                                alt="VectorI152"
-                                className="home-vector1"
-                              />
-                              <img
-                                src="public/playground_assets/vectori152-ckzh.svg"
-                                alt="VectorI152"
-                                className="home-vector2"
-                              />
+                              <div className="home-shopping-basket-icon">
+                                <img
+                                  src="/playground_assets/vectori152-2hh.svg"
+                                  alt="VectorI152"
+                                  className="home-vector"
+                                />
+                                <img
+                                  src="/playground_assets/vectori152-i0qk.svg"
+                                  alt="VectorI152"
+                                  className="home-vector1"
+                                />
+                                <img
+                                  src="/public/playground_assets/vectori152-ckzh.svg"
+                                  alt="VectorI152"
+                                  className="home-vector2"
+                                />
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <BrComponent path="top">
-                      <Container as="section" fluid>
-                        <BrComponent/>
-                      </Container>
-                    </BrComponent>
-                    <Container as="section" className="flex-fill pt-4">
-                      <Row className="flex-lg-nowrap">
+                      <Container as="section">
                         <BrComponent path="main">
-                          <Col xs="auto" className="flex-fill">
-                            <BrComponent/>
-                          </Col>
+                          <BrComponent/>
                         </BrComponent>
-                        <BrComponent path="right">
-                          <Col lg="3" className="flex-fill py-lg-2">
-                            <BrComponent/>
-                          </Col>
-                        </BrComponent>
-                      </Row>
-                    </Container>
-                    <BrComponent path="bottom">
-                      <Container as="section" fluid>
-                        <BrComponent/>
                       </Container>
-                    </BrComponent>
-                    <RestProduct/>
-                  </>)}
-                  {<BrCookieConsent path={configuration.path ?? ''} csUpdate={updateCookieConsentVal}/>}
+                      <RestProduct/>
+                      {<BrCookieConsent path={configuration.path ?? ''} csUpdate={updateCookieConsentVal}/>}
+                    </>)}
                 </BrPageContext.Consumer>
               </BrPage>
             </div>

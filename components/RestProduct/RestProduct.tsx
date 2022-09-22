@@ -16,7 +16,7 @@ export const RestProduct = () => {
                 className="home-ellipse18"
               />
               <img
-                src="public/playground_assets/ellipse20i152-ojyd.svg"
+                src="/playground_assets/ellipse20i152-ojyd.svg"
                 alt="Ellipse20I152"
                 className="home-ellipse20"
               />
@@ -47,7 +47,7 @@ export const RestProduct = () => {
                 className="home-ellipse181"
               />
               <img
-                src="public/playground_assets/ellipse20i152-liji.svg"
+                src="/playground_assets/ellipse20i152-liji.svg"
                 alt="Ellipse20I152"
                 className="home-ellipse201"
               />
@@ -78,7 +78,7 @@ export const RestProduct = () => {
                 className="home-ellipse182"
               />
               <img
-                src="public/playground_assets/ellipse20i152-bxqb.svg"
+                src="/playground_assets/ellipse20i152-bxqb.svg"
                 alt="Ellipse20I152"
                 className="home-ellipse202"
               />
@@ -109,7 +109,7 @@ export const RestProduct = () => {
                 className="home-ellipse183"
               />
               <img
-                src="public/playground_assets/ellipse20i152-mtp9.svg"
+                src="/playground_assets/ellipse20i152-mtp9.svg"
                 alt="Ellipse20I152"
                 className="home-ellipse203"
               />
@@ -141,7 +141,7 @@ export const RestProduct = () => {
           </span>
     <div className="home-group60">
       <img
-        src="public/playground_assets/ellipse181527-6ukd.svg"
+        src="/playground_assets/ellipse181527-6ukd.svg"
         alt="Ellipse181527"
         className="home-ellipse184"
       />
@@ -151,7 +151,7 @@ export const RestProduct = () => {
         className="home-rectangle112"
       />
       <img
-        src="public/playground_assets/rectangle1151527-vh5v.svg"
+        src="/playground_assets/rectangle1151527-vh5v.svg"
         alt="Rectangle1151527"
         className="home-rectangle115"
       />
@@ -276,7 +276,7 @@ export const RestProduct = () => {
         <div className="home-frame1051">
           <div className="home-frame1053">
             <img
-              src="public/playground_assets/unioni153-jrlr.svg"
+              src="/playground_assets/unioni153-jrlr.svg"
               alt="UnionI153"
               className="home-union2"
             />
@@ -300,7 +300,7 @@ export const RestProduct = () => {
         <div className="home-frame10511">
           <div className="home-frame10531">
             <img
-              src="public/playground_assets/unioni153-qp9.svg"
+              src="/playground_assets/unioni153-qp9.svg"
               alt="UnionI153"
               className="home-union3"
             />
@@ -315,7 +315,7 @@ export const RestProduct = () => {
         <div className="home-frame10512">
           <div className="home-frame10532">
             <img
-              src="public/playground_assets/unioni153-0os8.svg"
+              src="/playground_assets/unioni153-0os8.svg"
               alt="UnionI153"
               className="home-union4"
             />
@@ -330,7 +330,7 @@ export const RestProduct = () => {
         <div className="home-frame10513">
           <div className="home-frame10533">
             <img
-              src="public/playground_assets/unioni153-2rt.svg"
+              src="/playground_assets/unioni153-2rt.svg"
               alt="UnionI153"
               className="home-union5"
             />
@@ -345,7 +345,7 @@ export const RestProduct = () => {
         <div className="home-frame10514">
           <div className="home-frame10534">
             <img
-              src="public/playground_assets/unioni153-8bk.svg"
+              src="/playground_assets/unioni153-8bk.svg"
               alt="UnionI153"
               className="home-union6"
             />
@@ -360,7 +360,7 @@ export const RestProduct = () => {
         <div className="home-frame10515">
           <div className="home-frame10535">
             <img
-              src="public/playground_assets/unioni153-az7q.svg"
+              src="../..//playground_assets/unioni153-az7q.svg"
               alt="UnionI153"
               className="home-union7"
             />
