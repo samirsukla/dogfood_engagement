@@ -53,6 +53,7 @@ import { CommerceContextProvider } from './CommerceContext';
 import { Meta } from './Meta';
 import { CommerceConfig } from '../src/utils';
 import { Information } from './Information';
+import { RestProduct } from './RestProduct';
 
 interface AppProps {
   configuration: Omit<Configuration, 'httpClient'>;
@@ -64,13 +65,13 @@ interface AppProps {
 }
 
 export function App({
-  configuration,
-  page,
-  commerceConfig,
-  commerceClientFactory,
-  apolloState,
-  cookies,
-}: AppProps): JSX.Element {
+                      configuration,
+                      page,
+                      commerceConfig,
+                      commerceClientFactory,
+                      apolloState,
+                      cookies,
+                    }: AppProps): JSX.Element {
   const [, setCookieConsentVal] = useState<boolean>();
   const mapping = {
     BannerCollection,
@@ -135,98 +136,83 @@ export function App({
       >
         <CommerceContextProvider commerceConfig={commerceConfig} commerceClientFactory={factory}>
           <div className="home-container">
-            <BrPage configuration={{ ...configuration, httpClient: axios as any }} mapping={mapping} page={page}>
-              <BrPageContext.Consumer>
-                {(contextPage) => (<>
-                  <Meta page={contextPage!}/>
-                  <header>
-                    <Navbar bg="light" expand="lg" sticky="top" className="py-2 py-lg-3">
-                      <Container className="justify-content-start px-sm-3">
-                        <Navbar.Brand as={Link} href={contextPage?.getUrl('/')} title="Pacific Nuts & Bolts">
-                          <Image
-                            alt="Pacific Nuts & Bolts"
-                            src="/logo.png"
-                            srcSet="/logo.png 1x, /logo@2x.png 2x"
-                            height="30"
-                            className="d-none d-sm-block"
-                          />
-
-                          <Image
-                            alt="Pacific Nuts & Bolts"
-                            src="/logo-sm.png"
-                            srcSet="/logo-sm.png 1x, /logo-sm@2x.png 2x"
-                            height="30"
-                            className="d-block d-sm-none"
-                          />
-                          {getCookieConsentValue() && <BrPixel
-                            accountId={discoveryAccountId ?? ''}
-                            domainKey={discoveryDomainKey ?? ''}
-                            page={contextPage!}
-                            pageType="search"
-                            pageLabels="pacific,nut,bolt,commerce"
-                            type="pageview"
-                          />}
-                        </Navbar.Brand>
-                        {!contextPage?.getUrl()?.startsWith('/error') && (
-                          <>
-                            <BrComponent path="header">
-                              <div className={'order-lg-2 mr-3 mr-lg-0'}>
-                                <BrComponent/>
-                              </div>
-                            </BrComponent>
-                            <Navbar.Toggle className="ml-auto"/>
-                            <Navbar.Collapse className="order-lg-1 mr-lg-3">
-                              <BrComponent path="menu">
-                                <Menu/>
-                              </BrComponent>
-                            </Navbar.Collapse>
-                          </>
-                        )}
+            <div className="home-pacific-beauty-landingpage-personalized">
+              <BrPage configuration={{ ...configuration, httpClient: axios as any }} mapping={mapping} page={page}>
+                <BrPageContext.Consumer>
+                  {(contextPage) => (<>
+                    <Meta page={contextPage!}/>
+                    <div className="home-pacific-beauty-global-nav">
+                      <div className="home-frame155">
+                        <div className="home-frame160">
+                          <div className="home-frame156">
+                            <img
+                              src="public/playground_assets/unioni152-j6vqi.svg"
+                              alt="UnionI152"
+                              className="home-union"
+                            />
+                          </div>
+                        </div>
+                        <span className="home-text">
+                <span className="home-text001">PACIFIC</span>
+                <span>BEAUTY</span>
+              </span>
+                        <div className="home-frame159">
+                          <div className="home-frame1561">
+                            <img
+                              src="public/playground_assets/unioni152-hp0h.svg"
+                              alt="UnionI152"
+                              className="home-union1"
+                            />
+                            <div className="home-shopping-basket-icon">
+                              <img
+                                src="public/playground_assets/vectori152-2hh.svg"
+                                alt="VectorI152"
+                                className="home-vector"
+                              />
+                              <img
+                                src="public/playground_assets/vectori152-i0qk.svg"
+                                alt="VectorI152"
+                                className="home-vector1"
+                              />
+                              <img
+                                src="public/playground_assets/vectori152-ckzh.svg"
+                                alt="VectorI152"
+                                className="home-vector2"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <BrComponent path="top">
+                      <Container as="section" fluid>
+                        <BrComponent/>
                       </Container>
-                    </Navbar>
-                  </header>
-                  <BrComponent path="top">
-                    <Container as="section" fluid>
-                      <BrComponent/>
-                    </Container>
-                  </BrComponent>
-                  <Container as="section" className="flex-fill pt-4">
-                    <Row className="flex-lg-nowrap">
-                      <BrComponent path="main">
-                        <Col xs="auto" className="flex-fill">
-                          <BrComponent/>
-                        </Col>
-                      </BrComponent>
-                      <BrComponent path="right">
-                        <Col lg="3" className="flex-fill py-lg-2">
-                          <BrComponent/>
-                        </Col>
-                      </BrComponent>
-                    </Row>
-                  </Container>
-                  <BrComponent path="bottom">
-                    <Container as="section" fluid>
-                      <BrComponent/>
-                    </Container>
-                  </BrComponent>
-                  <BrComponent path="footer">
-                    <footer className="bg-secondary text-light py-3">
-                      <Container>
-                        <Row>
-                          <Col lg="9" xl="10">
+                    </BrComponent>
+                    <Container as="section" className="flex-fill pt-4">
+                      <Row className="flex-lg-nowrap">
+                        <BrComponent path="main">
+                          <Col xs="auto" className="flex-fill">
                             <BrComponent/>
                           </Col>
-                          <Col lg="3" xl="2" className="text-center text-lg-right py-lg-2">
-                            &copy; Bloomreach 2021
+                        </BrComponent>
+                        <BrComponent path="right">
+                          <Col lg="3" className="flex-fill py-lg-2">
+                            <BrComponent/>
                           </Col>
-                        </Row>
+                        </BrComponent>
+                      </Row>
+                    </Container>
+                    <BrComponent path="bottom">
+                      <Container as="section" fluid>
+                        <BrComponent/>
                       </Container>
-                      {<BrCookieConsent path={configuration.path ?? ''} csUpdate={updateCookieConsentVal}/>}
-                    </footer>
-                  </BrComponent>
-                </>)}
-              </BrPageContext.Consumer>
-            </BrPage>
+                    </BrComponent>
+                    <RestProduct/>
+                  </>)}
+                </BrPageContext.Consumer>
+              </BrPage>
+            </div>
           </div>
         </CommerceContextProvider>
       </CommerceConnectorProvider>
