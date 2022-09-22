@@ -20,7 +20,7 @@ import { Configuration, PageModel } from '@bloomreach/spa-sdk';
 import axios from 'axios';
 import { Container, Navbar, Image, Row, Col } from 'react-bootstrap';
 import { getCookieConsentValue } from 'react-cookie-consent';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { CommerceApiClientFactory, CommerceConnectorProvider } from '@bloomreach/connector-components-react';
 import { Cookies, CookiesProvider } from 'react-cookie';
 import {
@@ -53,6 +53,7 @@ import { CommerceContextProvider } from './CommerceContext';
 import { Meta } from './Meta';
 import { CommerceConfig } from '../src/utils';
 import { Information } from './Information';
+import { runPersonalization } from '../src/cookieconsent';
 
 interface AppProps {
   configuration: Omit<Configuration, 'httpClient'>;
@@ -100,6 +101,8 @@ export function App({
     setCookieConsentVal(val);
   };
 
+  const isClient = typeof window !== 'undefined';
+
   const {
     graphqlServiceUrl,
     connector,
@@ -123,6 +126,12 @@ export function App({
   }, [graphqlServiceUrl, connector, accountEnvId, defaultRequestHeaders, defaultAnonymousCredentials]);
 
   const reactCookies = cookies ? new Cookies(cookies) : undefined;
+
+  useEffect(() => {
+    if (isClient) {
+      runPersonalization(configuration.path);
+    }
+  }, [isClient]);
 
   return (
     <CookiesProvider cookies={reactCookies}>
