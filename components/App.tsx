@@ -210,6 +210,7 @@ export function App({
                     </BrComponent>
                     <RestProduct/>
                   </>)}
+                  {<BrCookieConsent path={configuration.path ?? ''} csUpdate={updateCookieConsentVal}/>}
                 </BrPageContext.Consumer>
               </BrPage>
             </div>
