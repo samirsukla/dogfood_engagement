@@ -65,13 +65,13 @@ interface AppProps {
 }
 
 export function App({
-  configuration,
-  page,
-  commerceConfig,
-  commerceClientFactory,
-  apolloState,
-  cookies,
-}: AppProps): JSX.Element {
+                      configuration,
+                      page,
+                      commerceConfig,
+                      commerceClientFactory,
+                      apolloState,
+                      cookies,
+                    }: AppProps): JSX.Element {
   const [, setCookieConsentVal] = useState<boolean>();
   const mapping = {
     BannerCollection,
@@ -179,7 +179,7 @@ export function App({
                         {!contextPage?.getUrl()?.startsWith('/error') && (
                           <>
                             <BrComponent path="header">
-                              <div className={'order-lg-2 mr-3 mr-lg-0'}>
+                              <div className={`order-lg-2 mr-3 mr-lg-0`}>
                                 <BrComponent/>
                               </div>
                             </BrComponent>
@@ -230,9 +230,7 @@ export function App({
                           </Col>
                         </Row>
                       </Container>
-                      {!contextPage?.isPreview()
-                        && <BrCookieConsent csUpdate={updateCookieConsentVal}/>
-                      }
+                      {<BrCookieConsent csUpdate={updateCookieConsentVal}/>}
                     </footer>
                   </BrComponent>
                 </>)}
