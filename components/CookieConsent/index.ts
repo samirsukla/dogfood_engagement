@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Bloomreach
+ * Copyright 2022 Bloomreach
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,20 +14,4 @@
  * limitations under the License.
  */
 
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
-@import '~bootstrap/scss/mixins';
-
-.navbar {
-  &__container {
-    max-width: 300px;
-
-    @include media-breakpoint-up(lg) {
-      width: 300px;
-    }
-
-    @include media-breakpoint-down(md) {
-      flex: 1 1;
-    }
-  }
-}
+export { CookieConsent } from './CookieConsent';
