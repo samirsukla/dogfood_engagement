@@ -82,9 +82,6 @@ export const isConsentReceived = (): boolean => {
 export const injectExponeaScriptSnippet = (token?: string, apiUrl?: string): void => {
   if (!token || !apiUrl) { return; }
 
-  console.log('token', token);
-  console.log('apiUrl', apiUrl);
-
   injectScript(getExponeaSdkSnippet(token, apiUrl));
 };
 

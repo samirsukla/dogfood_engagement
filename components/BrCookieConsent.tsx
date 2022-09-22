@@ -17,9 +17,7 @@
 import React from 'react';
 import CookieConsent, { getCookieConsentValue } from 'react-cookie-consent';
 import { useCookies } from 'react-cookie';
-import {
-  runPersonalization
-} from '../src/cookieconsent';
+import { runPersonalization } from '../src/cookieconsent';
 
 export interface csType {
   csUpdate: (val: boolean) => void;
