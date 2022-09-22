@@ -17,14 +17,21 @@
 import React from 'react';
 import CookieConsent, { getCookieConsentValue } from 'react-cookie-consent';
 import { useCookies } from 'react-cookie';
+import {
+  runPersonalization
+} from '../src/cookieconsent';
 
 export interface csType {
   csUpdate: (val: boolean) => void;
+  path: string;
 }
 export function BrCookieConsent(props: csType): React.ReactElement | null {
   const [, , removeCookie] = useCookies(['_br_uid_2']);
+
   if (getCookieConsentValue() !== 'true') {
     removeCookie('_br_uid_2');
+  } else {
+    runPersonalization(props.path);
   }
 
   return (

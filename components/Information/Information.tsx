@@ -17,7 +17,7 @@
 import React from 'react';
 import { ContainerItem, getContainerItemContent } from '@bloomreach/spa-sdk';
 import { BrProps } from '@bloomreach/react-sdk';
-import { Col, Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 interface InformationCompound {
   title: string;
@@ -28,15 +28,13 @@ export function Information({ component, page }: BrProps<ContainerItem>): React.
 
   return (
     <Row>
-      <Col>
-        <div className="home-pacific-beauty-promobar">
-          <div className="home-frame161">
+      <div className="home-pacific-beauty-promobar">
+        <div className="home-frame161">
           <span className="home-text003">
             {title && <span>{title}</span>}
           </span>
-          </div>
         </div>
-      </Col>
+      </div>
     </Row>
   );
 }

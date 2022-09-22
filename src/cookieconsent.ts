@@ -43,8 +43,8 @@ declare global {
 
 const COOKIE_CONSENTS_EXPIRATION_VALUE = 28; // Days
 
-const exponeaProjectToken = process.env.NEXT_PUBLIC_EXPONEA_PROJECT_TOKEN;
-const exponeaApiUrl = process.env.NEXT_PUBLIC_EXPONEA_API_URL;
+export const exponeaProjectToken = process.env.NEXT_PUBLIC_EXPONEA_PROJECT_TOKEN;
+export const exponeaApiUrl = process.env.NEXT_PUBLIC_EXPONEA_API_URL;
 
 const injectScript = (scriptContent: string): void => {
   const scriptTag = document.createElement('script');
@@ -79,8 +79,11 @@ export const isConsentReceived = (): boolean => {
   return !!cookieconsent && cookieconsent.utils.getCookie('cookieconsent_status') === cookieconsent.status.allow;
 };
 
-const injectExponeaScriptSnippet = (token?: string, apiUrl?: string): void => {
+export const injectExponeaScriptSnippet = (token?: string, apiUrl?: string): void => {
   if (!token || !apiUrl) { return; }
+
+  console.log('token', token);
+  console.log('apiUrl', apiUrl);
 
   injectScript(getExponeaSdkSnippet(token, apiUrl));
 };

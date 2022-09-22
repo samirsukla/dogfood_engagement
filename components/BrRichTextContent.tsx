@@ -55,12 +55,12 @@ export interface BrRichTextContentProps {
  * @returns a richtext content rendering function component
  */
 export function BrRichTextContent(props: BrRichTextContentProps): React.ReactElement | null {
-  const { page, content, tagName, className } = props;
+  const { content, tagName, className } = props;
   const Component = tagName || 'div';
   return (
     <Component
       className={className}
-      dangerouslySetInnerHTML={{ __html: page.rewriteLinks(page.sanitize(content.html)) }}
+      dangerouslySetInnerHTML={{ __html: content.html }}
     />
   );
 }

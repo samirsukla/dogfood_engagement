@@ -33,7 +33,7 @@ export function BannerCTA({ component, page }: BrProps<ContainerItem>): React.Re
   const document = link && page?.getContent<Document>(link);
 
   return (
-    <div className="home-image">
+    <>
       {title && <h3 className="mb-2">{title}</h3>}
       {content && <BrRichTextContent page={page!} content={{ html: content.value }}/>}
       {cta && (
@@ -41,6 +41,6 @@ export function BannerCTA({ component, page }: BrProps<ContainerItem>): React.Re
           {cta}
         </Button>
       )}
-    </div>
+    </>
   );
 }

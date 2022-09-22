@@ -27,7 +27,7 @@ class MyDocument extends Document {
               '    target: "https://demoapp-api.bloomreach.com",\n' +
               '    token: "bdf1fa20-32aa-11ed-abd8-522f64a49849",\n' +
               '    // replace with current customer ID or leave commented out for an anonymous customer\n' +
-              '    // customer: window.currentUserId,\n' +
+              '    customer: "kenan.salic@bloomreach.com",' +
               '    track: {\n' +
               '        visits: true,\n' +
               '    },\n' +
