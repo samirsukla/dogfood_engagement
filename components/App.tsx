@@ -65,13 +65,13 @@ interface AppProps {
 }
 
 export function App({
-                      configuration,
-                      page,
-                      commerceConfig,
-                      commerceClientFactory,
-                      apolloState,
-                      cookies,
-                    }: AppProps): JSX.Element {
+  configuration,
+  page,
+  commerceConfig,
+  commerceClientFactory,
+  apolloState,
+  cookies,
+}: AppProps): JSX.Element {
   const [, setCookieConsentVal] = useState<boolean>();
   const mapping = {
     BannerCollection,

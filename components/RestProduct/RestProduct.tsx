@@ -28,7 +28,8 @@ export const RestProduct = () => {
             </div>
             <span className="home-text016">
                     <span className="home-text017">Affair</span>
-                    <span className="home-text018"> </span>
+                    <span className="home-text018">
+</span>
                     <span>PB139</span>
                   </span>
             <div className="home-frame1049">
@@ -58,7 +59,8 @@ export const RestProduct = () => {
             </div>
             <span className="home-text024">
                     <span className="home-text025">Lavender</span>
-                    <span className="home-text026"> </span>
+                    <span className="home-text026">
+</span>
                     <span>PB 156</span>
                   </span>
             <div className="home-frame10491">
@@ -88,7 +90,8 @@ export const RestProduct = () => {
             </div>
             <span className="home-text032">
                     <span className="home-text033">Blue Haze</span>
-                    <span className="home-text034"> </span>
+                    <span className="home-text034">
+</span>
                     <span>PB 218</span>
                   </span>
             <div className="home-frame10492">
@@ -118,7 +121,8 @@ export const RestProduct = () => {
             </div>
             <span className="home-text040">
                     <span className="home-text041">Botticielli</span>
-                    <span className="home-text042"> </span>
+                    <span className="home-text042">
+</span>
                     <span>PB 6065</span>
                   </span>
             <div className="home-frame10493">
@@ -163,7 +167,8 @@ export const RestProduct = () => {
       />
     </div>
     <span className="home-text050">
-            <span className="home-text051"> </span>
+            <span className="home-text051">
+</span>
             <span>PPA 6065</span>
           </span>
     <div className="home-frame10494">
@@ -400,5 +405,5 @@ export const RestProduct = () => {
         </div>
       </div>
     </div>
-</>)
+</>);
 };
