@@ -62,8 +62,7 @@ const getExponeaSdkSnippet = (token: string, apiUrl: string): string => `
   exponea.start();
 `;
 
-const setupPersonalization =
-  (token?: string, apiUrl?: string) =>
+const setupPersonalization = (token?: string, apiUrl?: string) =>
   (path = '/'): void => {
     if (token && apiUrl) {
       initializePersonalization({ projectToken: token, targetURL: apiUrl, path });
@@ -81,7 +80,7 @@ export const isConsentReceived = (): boolean => {
 };
 
 const injectExponeaScriptSnippet = (token?: string, apiUrl?: string): void => {
-  if (!token || !apiUrl) return;
+  if (!token || !apiUrl) { return; }
 
   injectScript(getExponeaSdkSnippet(token, apiUrl));
 };
@@ -89,7 +88,7 @@ const injectExponeaScriptSnippet = (token?: string, apiUrl?: string): void => {
 let isConsentInitilaised = false;
 
 const CookieConsentInit = (): void => {
-  if (isConsentInitilaised) return;
+  if (isConsentInitilaised) { return; }
 
   window.cookieconsent?.initialise?.(
     {
