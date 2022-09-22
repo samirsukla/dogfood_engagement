@@ -32,7 +32,7 @@ class MyDocument extends Document {
               '        visits: true,\n' +
               '    },\n' +
               '});\n' +
-              'exponea.start();'
+              'exponea.start();',
           }}/>
           <link
             rel="stylesheet"

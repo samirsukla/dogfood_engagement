@@ -53,5 +53,7 @@ module.exports = {
     'implicit-arrow-linebreak': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
     'max-len': 'off',
+    'object-curly-newline': 'off',
+    'operator-linebreak': 'off',
   },
 };
