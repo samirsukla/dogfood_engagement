@@ -221,7 +221,7 @@ export function App({
                           </Col>
                         </Row>
                       </Container>
-                      {<BrCookieConsent path={configuration.path} csUpdate={updateCookieConsentVal}/>}
+                      {<BrCookieConsent path={configuration.path ?? ''} csUpdate={updateCookieConsentVal}/>}
                     </footer>
                   </BrComponent>
                 </>)}
