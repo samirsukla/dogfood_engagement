@@ -14,8 +14,6 @@
  * limitations under the License.
  */
 
-const { off } = require('process');
-
 /*
  * @rushstack/eslint-patch is used to include plugins as dev
  * dependencies instead of imposing them as peer dependencies
